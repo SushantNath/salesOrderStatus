@@ -1,5 +1,5 @@
 /* Enter your custom styles here */
-
+/*
 .sapMGT {
     display: inline-block;
     border-radius: 0.25rem;
@@ -12,4 +12,20 @@
     box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
     vertical-align: top;
     background-color: aliceblue;
+} */
+
+.detailsCard{
+	border-radius: 1rem;
+    border: 1px solid #f0f8ff;	
+}
+
+/*card background styling*/
+.newSelfCardsColor {
+    background: #f0f8ff !important;
+}
+.newDffCardsColor {
+    background: #f0f8ff !important;
+}
+.savedOrderCardsColor {
+    background: #f0f8ff !important;
 }

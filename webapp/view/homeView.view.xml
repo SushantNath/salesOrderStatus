@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.sap.salesOrderStatusUi.salesOrderStatusUi.controller.homeView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View controllerName="com.sap.salesOrderStatusUi.salesOrderStatusUi.controller.homeView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
 	xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
@@ -6,10 +6,11 @@
 				<Page id="page" title="{i18n>title}" showFooter="true" showHeader="false">
 					<content>
 						
-							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Fulfillment Application Title"
-		subheader="Subtitle" press="press">
-		<TileContent unit="EUR" footer="Current Quarter">
-			<ImageContent src="sap-icon://home-share" />
+					<!--		<GenericTile id="ediTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>edi}"
+		subheader="20 New Orders" press="press" >
+		<TileContent footer="orders with error" >
+		<NumericContent  value="15"
+			valueColor="Error"	   />
 		</TileContent>
 	</GenericTile>
 
@@ -52,6 +53,159 @@
 			<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/ProfileImage_LargeGenTile.png" />
 		</TileContent>
 	</GenericTile>
+		-->
+		
+			<VBox>
+		
+		<l:BlockLayout >
+						<l:BlockLayoutRow >
+							<!--New Self Orders Card-->
+							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
+								 width="1">
+								<VBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom" height="auto">
+										<core:Icon src="sap-icon://cart-4" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+										<Label text="{i18n>newSelfOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
+										<Button text="{i18n>newSelfOrderCreateButtonText}" press="onPressCreateNewSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
+									</HBox>
+								</VBox>
+							</l:BlockLayoutCell>
+							<!--New Dff Orders Card-->
+							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
+								 width="1">
+								<VBox>
+									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
+										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
+									</HBox>
+								</VBox>
+							</l:BlockLayoutCell>
+							<!--Saved Orders Card-->
+							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
+								 width="1">
+								<HBox>
+									<VBox>
+										<HBox>
+											<FlexBox direction="Column" alignItems="Start" class="sapUiSmallMarginEnd">
+												<items>
+													<core:Icon src="sap-icon://open-folder" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+													<Label text="{i18n>savedOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Button id="savedOrderButton" text="{i18n>savedOrderButtonText}" press="onPressOpenSavedOrder" type="Transparent"
+														class="sapUiTinyMarginBegin" enabled="false"/>
+												</items>
+											</FlexBox>
+										</HBox>
+									</VBox>
+								</HBox>
+							</l:BlockLayoutCell>
+							
+										<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
+								 width="1">
+								<VBox>
+									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
+										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
+									</HBox>
+								</VBox>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+					</l:BlockLayout>
+			</VBox>
+			
+			
+			
+			
+			
+			
+			
+			
+				<l:BlockLayout >
+						<l:BlockLayoutRow >
+							<!--New Self Orders Card-->
+							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newSelfCardsColor"
+								 width="1">
+								<VBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom" height="auto">
+										<core:Icon src="sap-icon://cart-4" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+										<Label text="{i18n>newSelfOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
+										<Button text="{i18n>newSelfOrderCreateButtonText}" press="onPressCreateNewSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
+									</HBox>
+								</VBox>
+							</l:BlockLayoutCell>
+							<!--New Dff Orders Card-->
+							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
+								 width="1">
+								<VBox>
+									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
+										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
+									</HBox>
+								</VBox>
+							</l:BlockLayoutCell>
+							<!--Saved Orders Card-->
+							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
+								 width="1">
+								<HBox>
+									<VBox>
+										<HBox>
+											<FlexBox direction="Column" alignItems="Start" class="sapUiSmallMarginEnd">
+												<items>
+													<core:Icon src="sap-icon://open-folder" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+													<Label text="{i18n>savedOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Button id="savedOrderButton1" text="{i18n>savedOrderButtonText}" press="onPressOpenSavedOrder" type="Transparent"
+														class="sapUiTinyMarginBegin" enabled="false"/>
+												</items>
+											</FlexBox>
+										</HBox>
+									</VBox>
+								</HBox>
+							</l:BlockLayoutCell>
+							
+										<l:BlockLayoutCell width="1">
+								<!--<VBox>
+									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
+										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+									</HBox>
+									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
+									</HBox>
+								</VBox>-->
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+					</l:BlockLayout>
+			
+			
+			
+			
+			
+			
+		
 		
 			</content>
 			
