@@ -29,6 +29,11 @@ this._oTPC = new TablePersoController({
 
 		},
 		
+			//Personalisation button click event
+		_onPersoButtonPressed: function (oEvent) {
+			this._oTPC.openDialog();
+		//	this.oTablePersoController.openDialog();
+		},
 		
 				//Read  Consumtion service
 		

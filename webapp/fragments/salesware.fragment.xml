@@ -1,0 +1,6 @@
+<core:FragmentDefinition  xmlns="sap.m" xmlns:core="sap.ui.core" displayBlock="true" height="100%">
+	
+		<Button icon="sap-icon://action-settings" press="_onPersoButtonPressed"/>
+										<Button class="sapUiTinyMargin" id="expXmlBtn2" press="onPostConsumption" text="Subsequent Documents" type="Transparent"/>
+	
+	</core:FragmentDefinition>
