@@ -1,222 +1,299 @@
-<mvc:View controllerName="com.sap.salesOrderStatusUi.salesOrderStatusUi.controller.homeView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
-	xmlns="sap.m">
+<mvc:View controllerName="com.sap.salesOrderStatusUi.salesOrderStatusUi.controller.homeView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}" showFooter="true" showHeader="false">
 					<content>
+						<VBox>
+							<l:BlockLayout >
+								<l:BlockLayoutRow >
+									<!--EDI Card-->
+									<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiTinyMarginBegin sapUiNoContentPadding detailsCard newCardsColor1" width="1">
+										<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+												<Label text="{i18n>edi}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+												<Label   class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label class=" sapUiSmallMarginBegin " />
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
+											<Label  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label  class=" sapUiSmallMarginBegin "  />
+												</HBox>
+												
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>ediMonitor}" press="onEdiPress"/>
+												
+										</VBox>
+									</l:BlockLayoutCell>
+									<!--Orders from salesware Card-->
+									<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor2" width="1">
+										<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>saleswareOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+												</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label text="10" design="Bold" class=" sapUiSmallMarginBegin " />
+												</HBox>
+											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label text="20" design="Bold" class=" sapUiSmallMarginBegin " />
+												</HBox>
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onSalesReportPress"/>
+										</VBox>
+									</l:BlockLayoutCell>
+									<!-- Orders manually entered Card-->
+									<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor3" width="1">
+										<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+													<Label text="{i18n>manualOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label text="10" design="Bold" class=" sapUiSmallMarginBegin " />
+												</HBox>
+											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label text="20" design="Bold" class=" sapUiSmallMarginBegin "  />
+												</HBox>
+												
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onOrdersManualPress"/>
+										</VBox>
+									</l:BlockLayoutCell>
+										<!-- Orders with credit block Card-->
+									
+									<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4" width="1">
+										<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>creditOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>checkBlock}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiMediumMarginTop " height="auto">
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+											
+											</HBox>
+											
+											
+										</VBox>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+							</l:BlockLayout>
+						</VBox>
+						<l:BlockLayout >
+							<l:BlockLayoutRow >
+								<!--Blocked Orders Card-->
+								<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiTinyMarginBegin sapUiNoContentPadding detailsCard newCardsColor4" width="1">
+									<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>blockedOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>priceDiff}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
+												<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+											
+											</HBox>
+											
+										</VBox>
+								</l:BlockLayoutCell>
+								<!--Incomplete Orders Card-->
+								<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor1" width="1">
+									<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>incompleteOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>incompLog}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+											
+											</HBox>
+												</VBox>
+								</l:BlockLayoutCell>
+								<!--Delivery blocked Orders Card-->
+								<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor2" width="1">
+									<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>blockedOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>delBlocked}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
+												<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+											
+											</HBox>
+													</VBox>
+									
+								</l:BlockLayoutCell>
+								<!--EDI Orders report Card-->
+								
+								<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
+									<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>ediOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label   class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label  class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+											
+											</HBox>
+												</VBox>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+						</l:BlockLayout>
 						
-					<!--		<GenericTile id="ediTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>edi}"
-		subheader="20 New Orders" press="press" >
-		<TileContent footer="orders with error" >
-		<NumericContent  value="15"
-			valueColor="Error"	   />
-		</TileContent>
-	</GenericTile>
-
-	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Manage Activity Master Data Type"
-		subheader="Subtitle" press="press">
-		<TileContent>
-			<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
-		</TileContent>
-	</GenericTile>
-
-	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Manage Activity Master Data Type With a Long Title Without an Icon"
-		subheader="Subtitle Launch Tile" mode="HeaderMode" press="press">
-		<TileContent unit="EUR" footer="Current Quarter" />
-	</GenericTile>
-
-	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Jessica D. Prince Senior Consultant"
-		subheader="Department" press="press">
-		<TileContent>
-			<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/ProfileImage_LargeGenTile.png" />
-		</TileContent>
-	</GenericTile>
-
-	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Jessica D. Prince Senior Consultant"
-		subheader="Department" press="press">
-		<TileContent>
-			<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/ProfileImage_LargeGenTile.png" />
-		</TileContent>
-	</GenericTile>
-	
-		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Jessica D. Prince Senior Consultant"
-		subheader="Department" press="press">
-		<TileContent>
-			<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/ProfileImage_LargeGenTile.png" />
-		</TileContent>
-	</GenericTile>
-	
-		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout "  header="Jessica D. Prince Senior Consultant"
-		subheader="Department" press="press">
-		<TileContent>
-			<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/ProfileImage_LargeGenTile.png" />
-		</TileContent>
-	</GenericTile>
-		-->
-		
-			<VBox>
-		
-		<l:BlockLayout >
-						<l:BlockLayoutRow >
-							<!--New Self Orders Card-->
-							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
-								 width="1">
-								<VBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom" height="auto">
-										<core:Icon src="sap-icon://cart-4" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
-										<Label text="{i18n>newSelfOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
-										<Button text="{i18n>newSelfOrderCreateButtonText}" press="onPressCreateNewSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
-									</HBox>
-								</VBox>
-							</l:BlockLayoutCell>
-							<!--New Dff Orders Card-->
-							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
-								 width="1">
-								<VBox>
-									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
-										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
-										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
-										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
-									</HBox>
-								</VBox>
-							</l:BlockLayoutCell>
-							<!--Saved Orders Card-->
-							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
-								 width="1">
-								<HBox>
-									<VBox>
-										<HBox>
-											<FlexBox direction="Column" alignItems="Start" class="sapUiSmallMarginEnd">
-												<items>
-													<core:Icon src="sap-icon://open-folder" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-													<Label text="{i18n>savedOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-													<Button id="savedOrderButton" text="{i18n>savedOrderButtonText}" press="onPressOpenSavedOrder" type="Transparent"
-														class="sapUiTinyMarginBegin" enabled="false"/>
-												</items>
-											</FlexBox>
-										</HBox>
-									</VBox>
-								</HBox>
-							</l:BlockLayoutCell>
+						<!--	<OverflowToolbar>
+							<ToolbarSpacer/>
+						
+							<Button type="Accept" text="{i18n>salesOrders}" press="onSalesPress"/>
+						</OverflowToolbar>-->
+						
+							<Panel backgroundDesign="Transparent"  expandable="true" expanded="true" height="auto">
+						
+						<Table id="consumptionTable" class="sapUiResponsiveMargin " mode="SingleSelect" width="95%" items="{path : 'shipToModel>/ShipToPartySet'}" 
+						 updateFinished="onUpdateFinished" selectionChange="onPressOrderNumber">
+							<headerToolbar>
+								
+								<Toolbar class="overFlowToolbarBackground sapUiLargeMarginTop">
+									<Title text="Stock for consumption"/>
+									
+									<ToolbarSpacer/>
+									<!--<SearchField  search=".onSearchConsumption" width="50%"/>	
+									<Button icon="sap-icon://download" press="_onDataExport"/>-->
+									<Button icon="sap-icon://action-settings" press="_onPersoButtonPressed"/>
+										<Button class="sapUiTinyMargin" id="expXmlBtn" press="onPostConsumption" text="Subsequent Documents" type="Transparent">
+				
+					<customData>
+						<core:CustomData key="option" value="expXmlBtn"/>
+					</customData>
+				</Button>		
+									<!--	<layoutData>
+											<OverflowToolbarLayoutData priority="NeverOverflow"/>
+										</layoutData>
+									</Button>-->
+									
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								
+								<Column id="hadlingunitCol" visible="true"><Text text="{i18n>handlingUnit}"/></Column>
+								<Column id="prodConsCol" visible="true" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>prodConsumption}"/></Column>
+								<Column id="stockprodCol" visible="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>stockProd}"/></Column>
+								<Column id="auomCol" visible="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>auom}"/></Column>
+								<Column id="descriptionCol" visible="true" hAlign="Center"><Text text="{i18n>description}"/></Column>
+								<Column id="batchCol" visible="true"><Text text="{i18n>batch}"/></Column>
+								<Column id="shelflifeCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>shelfLife}"/></Column>
+								<Column id="origincountryCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>originCountry}"/></Column>
+								<Column id="restrictedUseCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>restrictedUse}"/></Column>
+								<Column id="stockTypeCol" visible="false" hAlign="Center"><Text text="{i18n>stockType}"/></Column>
+								<Column id="stockTypeDescCol" visible="false"><Text text="{i18n>stockTypeDesc}"/></Column>
+								<Column id="suppyareaprodCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>supplyAreaProd}"/></Column>
+								<Column id="storageBinCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>storageBin}"/></Column>
+								<Column id="ownerCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>owner}"/></Column>
 							
-										<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
-								 width="1">
-								<VBox>
-									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
-										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
-										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
-										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
-									</HBox>
-								</VBox>
-							</l:BlockLayoutCell>
-						</l:BlockLayoutRow>
-					</l:BlockLayout>
-			</VBox>
-			
-			
-			
-			
-			
-			
-			
-			
-				<l:BlockLayout >
-						<l:BlockLayoutRow >
-							<!--New Self Orders Card-->
-							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newSelfCardsColor"
-								 width="1">
-								<VBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom" height="auto">
-										<core:Icon src="sap-icon://cart-4" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
-										<Label text="{i18n>newSelfOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
-										<Button text="{i18n>newSelfOrderCreateButtonText}" press="onPressCreateNewSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
-									</HBox>
-								</VBox>
-							</l:BlockLayoutCell>
-							<!--New Dff Orders Card-->
-							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
-								 width="1">
-								<VBox>
-									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
-										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
-										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
-										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
-									</HBox>
-								</VBox>
-							</l:BlockLayoutCell>
-							<!--Saved Orders Card-->
-							<l:BlockLayoutCell class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding  newSelfCardsColor"
-								 width="1">
-								<HBox>
-									<VBox>
-										<HBox>
-											<FlexBox direction="Column" alignItems="Start" class="sapUiSmallMarginEnd">
-												<items>
-													<core:Icon src="sap-icon://open-folder" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-													<Label text="{i18n>savedOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-													<Button id="savedOrderButton1" text="{i18n>savedOrderButtonText}" press="onPressOpenSavedOrder" type="Transparent"
-														class="sapUiTinyMarginBegin" enabled="false"/>
-												</items>
-											</FlexBox>
-										</HBox>
-									</VBox>
-								</HBox>
-							</l:BlockLayoutCell>
+								<Column id="valuationQuanCol" visible="false"><Text text="{i18n>valuation}"/></Column>
+								<Column id="valuationUnitCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>valuationUnit}"/></Column>
+								<Column id="valuationMeasCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>valuationMeasured}"/></Column>
+								<Column id="typeCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>type}"/></Column>
+								<Column id="salesOrderCol" visible="false" hAlign="Center"><Text text="{i18n>salesOrder}"/></Column>
+								<Column id="salesOrditemCol" visible="false"><Text text="{i18n>salesOrderItem}"/></Column>
+								<Column id="baseUOMCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>baseUnitMeasure}"/></Column>
+								<Column id="operationCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>operationActivity}"/></Column>
+								<Column id="ownerRoleCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>ownerRole}"/></Column>
+								<Column id="partyEntCol" visible="false" hAlign="Center"><Text text="{i18n>partyEntitled}"/></Column>
+								<Column id="stockIdenCol" visible="false"><Text text="{i18n>stockIdentification}"/></Column>
+								<Column id="stockProdSupCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>stockProdSupply}"/></Column>
+								<Column id="storagetypeCol" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>storageType}"/></Column>
+								
+								<!-- Extra columns as per WRICEF 4899-->
+								
+								<Column id="quanConsumeCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>quantityConsume}"/></Column>
+								<Column id="quanPSACol" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>quantityPSA}"/></Column>
 							
-										<l:BlockLayoutCell width="1">
-								<!--<VBox>
-									<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
-										<core:Icon src="sap-icon://group" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiTinyMarginBottom iconSize"></core:Icon>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginBottom sapUiNoMarginTop" height="auto">
-										<Label text="{i18n>newDffOrderLabelText}" design="Bold" class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-									</HBox>
-									<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
-										<Button text="{i18n>newDffOrderButtonText}" press="onPressDffSelfOrder" type="Transparent" class="sapUiTinyMarginBegin"/>
-									</HBox>
-								</VBox>-->
-							</l:BlockLayoutCell>
-						</l:BlockLayoutRow>
-					</l:BlockLayout>
-			
-			
-			
-			
-			
-			
-		
-		
-			</content>
-			
-			<footer>
-			<OverflowToolbar>
-				<ToolbarSpacer/>
-				<Button type="Accept" text="{i18n>ediMonitor}"/>
-				<Button type="Accept" text="{i18n>salesOrders}"/>
-			</OverflowToolbar>
-		</footer>
-			
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Link press="_onOrderClick" text="{shipToModel>ShipName}" visible="true" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true"
+											emphasized="false" subtle="false"/>
+										<ObjectIdentifier title="{shipToModel>ShipAddress}" class="sapMTableContentMargin"/>
+										<Text text="{shipToModel>ShipCity}"/>
+										<Text text="{shipToModel>ShipCity}"/>
+										<ObjectNumber number="{shipToModel>UnitPrice}" unit="{shipToModel>WeightUnit}"/>
+										<ObjectNumber
+											number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+											unit="{shipToModel>CurrencyCode}"/>
+										<ObjectIdentifier title="{shipToModel>Name}" text="{shipToModel>ProductId}" class="sapMTableContentMargin"/>
+										<Text text="{shipToModel>ShipCountry}"/>
+										<Text text="{shipToModel>CustomerID}"/>
+										<ObjectNumber number="{shipToModel>ExtendedPrice}" unit="{WeightUnit}"/>
+										<ObjectNumber
+											number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+											unit="{shipToModel>CurrencyCode}"/>
+										<ObjectIdentifier title="{shipToModel>Name}" text="{ProductId}" class="sapMTableContentMargin"/>
+										<Text text="{shipToModel>ProductName}"/>
+										<Text text="{shipToModel>ShipperName}"/>
+										<ObjectNumber number="{shipToModel>WeightMeasure}" unit="{WeightUnit}"/>
+										
+										
+										
+										
+											<Link press="_onOrderClick" text="{shipToModel>ShipName}" visible="true" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true"
+											emphasized="false" subtle="false"/>
+										<ObjectIdentifier title="{shipToModel>ShipAddress}" class="sapMTableContentMargin"/>
+										<Text text="{shipToModel>ShipCity}"/>
+										<Text text="{shipToModel>ShipCity}"/>
+										<ObjectNumber number="{shipToModel>UnitPrice}" unit="{WeightUnit}"/>
+										<ObjectNumber
+											number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+											unit="{shipToModel>CurrencyCode}"/>
+										<ObjectIdentifier title="{shipToModel>Name}" text="{ProductId}" class="sapMTableContentMargin"/>
+										<Text text="{shipToModel>ShipCountry}"/>
+										<Text text="{shipToModel>CustomerID}"/>
+										<ObjectNumber number="{shipToModel>ExtendedPrice}" unit="{WeightUnit}"/>
+										<ObjectNumber
+											number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+											unit="{shipToModel>CurrencyCode}"/>
+										<ObjectIdentifier title="{shipToModel>Name}" text="{ProductId}" class="sapMTableContentMargin"/>
+										<!--<Text text="{shipToModel>ProductName}"/>-->
+											<Input id="quanConsInpId" enabled="false"  value="CustmProductName" />
+											<!--<TextField value="Consumption" editable="{isEnabled}" />-->
+
+										<!--<Text text="{shipToModel>ShipperName}"/>-->
+											<Input  id="quanPSAInpId" enabled="false"  value="CustmProductName" />
+										<!--<ObjectNumber number="{shipToModel>WeightMeasure}" unit="{WeightUnit}"/>-->
+										<!--<TextField value="Consumption" editable="{isEnabled}" />-->
+
+									<Text text="{shipToModel>ShipperName}"/>
+										
+											<!-- Text field as per WRICEF 4899-->
+											<Text text="{shipToModel>ShipperName}"/>
+										<Text text="{shipToModel>ShipperName}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						
+						</Panel>
+						
+					</content>
+					<footer>
+					
+					</footer>
 				</Page>
 			</pages>
 		</App>
