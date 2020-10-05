@@ -11,62 +11,65 @@ sap.ui.define([
 
     // this.getView().byId("page").addDependent(this.tableFragment);
     
+//     var fragmentId = this.getView().createId("ediOrdersFrag");
+// var tab = sap.ui.core.Fragment.byId(fragmentId, "consumptionTable");
     
-    	// Create a persistence key
- var oPersId = {container: "mycontainer-1", item: "myitem-1"};
+    
+//     	// Create a persistence key
+//  var oPersId = {container: "mycontainer-1", item: "myitem-1"};
 
-// // Get a personalization service provider from the shell (or create your own)
-var oProvider = sap.ushell.Container.getService("Personalization").getPersonalizer(oPersId);
+// // // Get a personalization service provider from the shell (or create your own)
+// var oProvider = sap.ushell.Container.getService("Personalization").getPersonalizer(oPersId);
 
-// Instantiate a controller connecting your table and the persistence service
-this._oTPC = new TablePersoController({
-    table: this.getView().byId("consumptionTable"),
-    persoService: oProvider
-  // persoService: persoService
-}).activate();
+// // Instantiate a controller connecting your table and the persistence service
+// this._oTPC = new TablePersoController({
+//     table: tab,
+//     persoService: oProvider
+//   // persoService: persoService
+// }).activate();
 
-    this.getEdiOrders();
+  //  this.getEdiOrders();
 
 		},
 		
 			//Personalisation button click event
-		_onPersoButtonPressed: function (oEvent) {
-			this._oTPC.openDialog();
-		//	this.oTablePersoController.openDialog();
-		},
+		// _onPersoButtonPressed: function (oEvent) {
+		// 	this._oTPC.openDialog();
+		// //	this.oTablePersoController.openDialog();
+		// },
 		
 				//Read  Consumtion service
 		
-		getEdiOrders: function () {
+	// 	getEdiOrders: function () {
 		
-				var oModel = this.getOwnerComponent().getModel();
-				//	globalModel=oModel;
-			var that = this;
-			var oView = this.getView();
-			sap.ui.core.BusyIndicator.show();
-				oModel.read("/Invoices", {
+	// 			var oModel = this.getOwnerComponent().getModel();
+	// 			//	globalModel=oModel;
+	// 		var that = this;
+	// 		var oView = this.getView();
+	// 		sap.ui.core.BusyIndicator.show();
+	// 			oModel.read("/Invoices", {
 
-				success: function (oData, Response) {
+	// 			success: function (oData, Response) {
 
-					var orderModel = new sap.ui.model.json.JSONModel();
-					oView.setModel(orderModel, "shipToModel");
-					oView.getModel("shipToModel").setProperty("/ShipToPartySet", oData.results);
-					sap.ui.core.BusyIndicator.hide();
-					// var immInvoiceModel = new sap.ui.model.json.JSONModel(oData);
-					// 	that.getView().setModel(immInvoiceModel, "immInvoiceData");
-					// 	immInvoiceModel.setProperty("/immInvoiceSet", oData.results);
-	sap.ui.core.BusyIndicator.hide();
-					console.log("Inside Success function", oData.results);
-				},
+	// 				var orderModel = new sap.ui.model.json.JSONModel();
+	// 				oView.setModel(orderModel, "shipToModel");
+	// 				oView.getModel("shipToModel").setProperty("/ShipToPartySet", oData.results);
+	// 				sap.ui.core.BusyIndicator.hide();
+	// 				// var immInvoiceModel = new sap.ui.model.json.JSONModel(oData);
+	// 				// 	that.getView().setModel(immInvoiceModel, "immInvoiceData");
+	// 				// 	immInvoiceModel.setProperty("/immInvoiceSet", oData.results);
+	// sap.ui.core.BusyIndicator.hide();
+	// 				console.log("Inside Success function", oData.results);
+	// 			},
 
-				error: function (oData, Response, oError) {
-					sap.ui.core.BusyIndicator.hide();
-					console.log("Inside Error function");
-				}
+	// 			error: function (oData, Response, oError) {
+	// 				sap.ui.core.BusyIndicator.hide();
+	// 				console.log("Inside Error function");
+	// 			}
 
-			});
+	// 		});
 			
-		},
+	// 	},
 		
 		onEdiPress: function () {
 console.log("Inside EDI press");

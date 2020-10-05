@@ -162,7 +162,7 @@
 							<Button type="Accept" text="{i18n>salesOrders}" press="onSalesPress"/>
 						</OverflowToolbar>-->
 						
-							<Panel backgroundDesign="Transparent"  expandable="true" expanded="true" height="auto">
+						<!--	<Panel backgroundDesign="Transparent"  expandable="true" expanded="true" height="auto">
 								
 								<core:Fragment  fragmentName="com.sap.salesOrderStatusUi.salesOrderStatusUi.fragments.ediOrders" type="XML" 
 							id="ediOrdersFrag"/>
@@ -170,7 +170,7 @@
 							<core:Fragment fragmentName="com.sap.salesOrderStatusUi.salesOrderStatusUi.fragments.salesware" type="XML" 
 							id="saleswareFrag"/>
 					
-						</Panel>
+						</Panel>-->
 						
 					</content>
 					<footer>

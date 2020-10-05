@@ -1,11 +1,11 @@
 <core:FragmentDefinition  xmlns="sap.m" xmlns:core="sap.ui.core" displayBlock="true" height="100%">
 
-	<Table id="consumptionTable" visible="true" mode="SingleSelect" width="95%" items="{path : 'shipToModel>/ShipToPartySet'}" 
+	<Table id="consumptionTable" visible="true" mode="SingleSelect"  items="{path : 'shipToModel>/ShipToPartySet'}" 
 						 updateFinished="onUpdateFinished" selectionChange="onPressOrderNumber">
 							<headerToolbar>
 								
 								<Toolbar class="overFlowToolbarBackground sapUiLargeMarginTop">
-									<Title text="Stock for consumption"/>
+									<Title text="Documents"/>
 									
 									<ToolbarSpacer/>
 									<!--<SearchField  search=".onSearchConsumption" width="50%"/>	
@@ -26,14 +26,14 @@
 							</headerToolbar>
 							<columns>
 								
-								<Column id="hadlingunitCol" visible="true"><Text text="{i18n>handlingUnit}"/></Column>
-								<Column id="prodConsCol" visible="true" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>prodConsumption}"/></Column>
-								<Column id="stockprodCol" visible="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>stockProd}"/></Column>
-								<Column id="auomCol" visible="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>auom}"/></Column>
-								<Column id="descriptionCol" visible="true" hAlign="Center"><Text text="{i18n>description}"/></Column>
-								<Column id="batchCol" visible="true"><Text text="{i18n>batch}"/></Column>
-								<Column id="shelflifeCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>shelfLife}"/></Column>
-								<Column id="origincountryCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>originCountry}"/></Column>
+								<Column id="iDocStatusCol" visible="true"><Text text="{i18n>handlingUnit}"/></Column>
+								<Column id="iDocIdCol" visible="true" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>prodConsumption}"/></Column>
+								<Column id="matStatusCol" visible="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>stockProd}"/></Column>
+								<Column id="creationDateCol" visible="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>auom}"/></Column>
+								<Column id="creationTimeCol" visible="true" hAlign="Center"><Text text="{i18n>description}"/></Column>
+								<Column id="salesOrgCol" visible="true"><Text text="{i18n>batch}"/></Column>
+								<Column id="distChannelCol" visible="false" minScreenWidth="Tablet" demandPopin="true"><Text text="{i18n>shelfLife}"/></Column>
+								<Column id="orderRefCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>originCountry}"/></Column>
 								<Column id="restrictedUseCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="{i18n>restrictedUse}"/></Column>
 								<Column id="stockTypeCol" visible="false" hAlign="Center"><Text text="{i18n>stockType}"/></Column>
 								<Column id="stockTypeDescCol" visible="false"><Text text="{i18n>stockTypeDesc}"/></Column>
