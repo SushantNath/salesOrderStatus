@@ -52,11 +52,11 @@
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
 												<Label text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-												<Label text="10" design="Bold" class=" sapUiSmallMarginBegin " />
+												<Label id="manualNewOrdId" design="Bold" class=" sapUiSmallMarginBegin " />
 												</HBox>
 											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
 												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-												<Label text="20" design="Bold" class=" sapUiSmallMarginBegin "  />
+												<Label id="manualErrOrdId" design="Bold" class=" sapUiSmallMarginBegin "  />
 												</HBox>
 												
 													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onOrdersManualPress"/>

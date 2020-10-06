@@ -28,7 +28,7 @@ sap.ui.define([
 //   // persoService: persoService
 // }).activate();
 
-  //  this.getEdiOrders();
+    this.ManualOrders();
 
 		},
 		
@@ -40,36 +40,41 @@ sap.ui.define([
 		
 				//Read  Consumtion service
 		
-	// 	getEdiOrders: function () {
+		ManualOrders: function () {
 		
-	// 			var oModel = this.getOwnerComponent().getModel();
-	// 			//	globalModel=oModel;
-	// 		var that = this;
-	// 		var oView = this.getView();
-	// 		sap.ui.core.BusyIndicator.show();
-	// 			oModel.read("/Invoices", {
+				var oModel = this.getOwnerComponent().getModel("manualOrdersModel");
+				//	globalModel=oModel;
+			var that = this;
+			var oView = this.getView();
+		//	sap.ui.core.BusyIndicator.show();
+				oModel.read("/SalesOrddataSet", {
 
-	// 			success: function (oData, Response) {
+				success: function (oData, Response) {
 
-	// 				var orderModel = new sap.ui.model.json.JSONModel();
-	// 				oView.setModel(orderModel, "shipToModel");
-	// 				oView.getModel("shipToModel").setProperty("/ShipToPartySet", oData.results);
-	// 				sap.ui.core.BusyIndicator.hide();
-	// 				// var immInvoiceModel = new sap.ui.model.json.JSONModel(oData);
-	// 				// 	that.getView().setModel(immInvoiceModel, "immInvoiceData");
-	// 				// 	immInvoiceModel.setProperty("/immInvoiceSet", oData.results);
-	// sap.ui.core.BusyIndicator.hide();
-	// 				console.log("Inside Success function", oData.results);
-	// 			},
+				oView.byId("manualNewOrdId").setText( oData.results[0].CountC);	
+				oView.byId("manualErrOrdId").setText( oData.results[0].CountI);	
+					sap.ui.core.BusyIndicator.hide();
+					// var immInvoiceModel = new sap.ui.model.json.JSONModel(oData);
+					// 	that.getView().setModel(immInvoiceModel, "immInvoiceData");
+					// 	immInvoiceModel.setProperty("/immInvoiceSet", oData.results);
+//	sap.ui.core.BusyIndicator.hide();
+					console.log("Inside Success function", oData.results);
+				},
 
-	// 			error: function (oData, Response, oError) {
-	// 				sap.ui.core.BusyIndicator.hide();
-	// 				console.log("Inside Error function");
-	// 			}
+				error: function (oData, Response, oError) {
+				//	sap.ui.core.BusyIndicator.hide();
+					console.log("Inside Error function");
+				}
 
-	// 		});
+			});
 			
-	// 	},
+		},
+		
+		
+		onOrdersManualPress: function (oEvent) {
+			
+			
+		},
 		
 		onEdiPress: function () {
 console.log("Inside EDI press");

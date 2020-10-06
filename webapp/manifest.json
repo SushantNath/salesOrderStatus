@@ -15,11 +15,12 @@
 		},
 		
 			"dataSources": {
-			"Northwind": {
-				"uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
+			"manualOrder": {
+				"uri": "/sap/opu/odata/sap/ZOTC_MANUAL_ORD_MONITOR_SRV",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"
+				
 				}
 			}
 		
@@ -70,8 +71,8 @@
 					"bundleName": "com.sap.salesOrderStatusUi.salesOrderStatusUi.i18n.i18n"
 				}
 			},
-				"": {
-				"dataSource": "Northwind"
+				"manualOrdersModel": {
+				"dataSource": "manualOrder"
 			}
 		},
 		"resources": {
