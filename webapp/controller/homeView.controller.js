@@ -7,6 +7,8 @@ sap.ui.define([
 	return Controller.extend("com.sap.salesOrderStatusUi.salesOrderStatusUi.controller.homeView", {
 		onInit: function () {
 			
+			
+			
 			 //this.tableFragment = sap.ui.xmlfragment("com.sap.salesOrderStatusUi.salesOrderStatusUi.fragments.editOrders");
 
     // this.getView().byId("page").addDependent(this.tableFragment);
