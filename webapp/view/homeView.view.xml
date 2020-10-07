@@ -41,7 +41,7 @@
 												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
 												<Label text="20" design="Bold" class=" sapUiSmallMarginBegin " />
 												</HBox>
-													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onSalesReportPress"/>
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onSalesPress"/>
 										</VBox>
 									</l:BlockLayoutCell>
 									<!-- Orders manually entered Card-->
@@ -97,7 +97,7 @@
 													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
-												<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+												<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onBlockOrdersPress"/>
 											
 											</HBox>
 											
@@ -114,7 +114,7 @@
 													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
-													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onIncompleteOrderPress"/>
 											
 											</HBox>
 												</VBox>
@@ -130,7 +130,7 @@
 													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
-												<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+												<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onDeliveryBlockPress"/>
 											
 											</HBox>
 													</VBox>
@@ -148,7 +148,7 @@
 													<Label  class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
-													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onEdiOrderPress"/>
 											
 											</HBox>
 												</VBox>

@@ -48,6 +48,13 @@ sap.ui.define([
 				//	globalModel=oModel;
 			var that = this;
 			var oView = this.getView();
+			
+		var startupParameters=	this.getOwnerComponent().getComponentData().startupParameters;
+		
+		this.distrChannel = startupParameters.DistributionChannel;
+		this.customer = startupParameters.Customer;
+		this.salesOrganisation = startupParameters.SalesOrganization;
+		console.log("Start up parametrs are",startupParameters);
 		//	sap.ui.core.BusyIndicator.show();
 				oModel.read("/SalesOrddataSet", {
 					
@@ -74,13 +81,10 @@ sap.ui.define([
 		},
 		
 		
-		onOrdersManualPress: function (oEvent) {
-			
-			
-		},
-		
 		onEdiPress: function () {
 console.log("Inside EDI press");
+
+this.orderType="ED";
 
 var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
 var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
@@ -88,7 +92,8 @@ var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 			  semanticObject: "z_ediMonitor",
 			  action: "display"
 		        },
-			params : { }
+			params : {
+			}
 		}));
 oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 
@@ -96,18 +101,48 @@ oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 		
 			onSalesPress: function () {
 console.log("Inside Sales press");
-
+this.orderType="SP";
 var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
 var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 		target: {
 			  semanticObject: "ZSalesOrdOpnMgmtSem",
 			  action: "display"
 		        },
-			params : { }
+			params : {"DistributionChannel": this.distrChannel,
+			"Customer":this.customer,
+			"SalesOrganization":	this.salesOrganisation,
+			"Ordertype": this.orderType}
 		}));
 oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 
+		},
+		
+				onOrdersManualPress: function (oEvent) {
+			this.orderType="MO";
+			
+		},
+		
+				onCreditBlockPress: function (oEvent) {
+			this.orderType="CO";
+			
+		},
+			onBlockOrdersPress: function (oEvent) {
+			
+			this.orderType="BO";
+		},
+			onIncompleteOrderPress: function (oEvent) {
+			this.orderType="IO";
+			
+		},
+			onDeliveryBlockPress: function (oEvent) {
+			this.orderType="DO";
+			
+		},
+			onEdiOrderPress: function (oEvent) {
+			
+			this.orderType="EO";
 		}
+		
 		
 		
 		
