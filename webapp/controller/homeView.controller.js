@@ -31,6 +31,7 @@ sap.ui.define([
 // }).activate();
 
     this.ManualOrders();
+    this.ediOrders();
 
 		},
 		
@@ -74,6 +75,45 @@ sap.ui.define([
 				error: function (oData, Response, oError) {
 				//	sap.ui.core.BusyIndicator.hide();
 					console.log("Inside Error function");
+				}
+
+			});
+			
+		},
+		
+		//EDI orders data fetch
+			ediOrders: function () {
+		
+				var oModel = this.getOwnerComponent().getModel("manualOrdersModel");
+				//	globalModel=oModel;
+			var that = this;
+			var oView = this.getView();
+			
+		// var startupParameters=	this.getOwnerComponent().getComponentData().startupParameters;
+		
+		// this.distrChannel = startupParameters.DistributionChannel;
+		// this.customer = startupParameters.Customer;
+		// this.salesOrganisation = startupParameters.SalesOrganization;
+		// console.log("Start up parametrs are",startupParameters);
+		//	sap.ui.core.BusyIndicator.show();
+				oModel.read("/EdiOrddataSet", {
+					
+
+				success: function (oData, Response) {
+
+				oView.byId("ediNewOrdId").setText( oData.results[0].CountC);	
+				oView.byId("ediErrorOrdId").setText( oData.results[0].CountI);	
+				//	sap.ui.core.BusyIndicator.hide();
+					// var immInvoiceModel = new sap.ui.model.json.JSONModel(oData);
+					// 	that.getView().setModel(immInvoiceModel, "immInvoiceData");
+					// 	immInvoiceModel.setProperty("/immInvoiceSet", oData.results);
+//	sap.ui.core.BusyIndicator.hide();
+					console.log("Inside EDI orders Success function", oData.results);
+				},
+
+				error: function (oData, Response, oError) {
+				//	sap.ui.core.BusyIndicator.hide();
+					console.log("Inside EDI orders  Error function");
 				}
 
 			});

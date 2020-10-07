@@ -144,13 +144,21 @@
 											<Label text="{i18n>ediOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
-												<Label   class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-													<Label  class=" sapUiSmallMarginBegin "/>
+												<Label  text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label  id="ediNewOrdId" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
-											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
+											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label id="ediErrorOrdId" design="Bold" class=" sapUiSmallMarginBegin " />
+												</HBox>
+											
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop" height="auto">
 													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onEdiOrderPress"/>
 											
 											</HBox>
+											
+											
+										
 												</VBox>
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
