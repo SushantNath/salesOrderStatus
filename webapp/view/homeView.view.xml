@@ -35,13 +35,13 @@
 												</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
 												<Label text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-												<Label text="10" design="Bold" class=" sapUiSmallMarginBegin " />
+												<Label id="salesWareNewOrdId" design="Bold" class=" sapUiSmallMarginBegin " />
 												</HBox>
 											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
 												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-												<Label text="20" design="Bold" class=" sapUiSmallMarginBegin " />
+												<Label id="salesWareErrOrdId" design="Bold" class=" sapUiSmallMarginBegin " />
 												</HBox>
-													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onSalesPress"/>
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onSaleswarePress"/>
 										</VBox>
 									</l:BlockLayoutCell>
 									<!-- Orders manually entered Card-->
@@ -71,7 +71,7 @@
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
 												<Label text="{i18n>checkBlock}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
+													<Label id="creditBlkErrOrdId" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiMediumMarginTop " height="auto">
 													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onCreditBlockPress"/>
@@ -111,7 +111,7 @@
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
 												<Label text="{i18n>incompLog}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
+													<Label id="incompleteErrOrdId" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
 													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onIncompleteOrderPress"/>
@@ -127,7 +127,7 @@
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
 												<Label text="{i18n>delBlocked}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
-													<Label text="10" design="Bold" class=" sapUiSmallMarginBegin "/>
+													<Label id="deliveryBlkErrOrdId" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
 												<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onDeliveryBlockPress"/>
