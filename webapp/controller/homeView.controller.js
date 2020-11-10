@@ -326,9 +326,9 @@ var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 		        },
 			params : {"AUART": this.orderType,
 
-			"VKORG": this.salesOrganisation,
-			"VTWEG": this.distrChannel,
-			"SPART": this.divison
+			// "VKORG": this.salesOrganisation,
+			// "VTWEG": this.distrChannel,
+			// "SPART": this.divison
 				 
 			}
 		}));
@@ -362,9 +362,9 @@ oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 		        },
 			params : {"AUART": this.orderType,
 
-			"VKORG": this.salesOrganisation,
-			"VTWEG": this.distrChannel,
-			"SPART": this.divison
+			// "VKORG": this.salesOrganisation,
+			// "VTWEG": this.distrChannel,
+			// "SPART": this.divison
 				 
 			}
 		}));
@@ -390,9 +390,9 @@ var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 		        },
 			params : {
 
-			"VKORG": this.salesOrganisation,
-			"VTWEG": this.distrChannel,
-			"SPART": this.divison
+			// "VKORG": this.salesOrganisation,
+			// "VTWEG": this.distrChannel,
+			// "SPART": this.divison
 				 
 			}
 		}));
@@ -416,9 +416,9 @@ var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 		        },
 			params : {
 
-			"VKORG": this.salesOrganisation,
-			"VTWEG": this.distrChannel,
-			"SPART": this.divison
+			// "VKORG": this.salesOrganisation,
+			// "VTWEG": this.distrChannel,
+			// "SPART": this.divison
 				 
 			}
 		}));
@@ -443,9 +443,9 @@ oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 		        },
 			params : {
 
-			"VKORG": this.salesOrganisation,
-			"VTWEG": this.distrChannel,
-			"SPART": this.divison
+			// "VKORG": this.salesOrganisation,
+			// "VTWEG": this.distrChannel,
+			// "SPART": this.divison
 				 
 			}
 		}));
@@ -470,9 +470,9 @@ oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 		        },
 			params : {
 
-			"VKORG": this.salesOrganisation,
-			"VTWEG": this.distrChannel,
-			"SPART": this.divison
+			// "VKORG": this.salesOrganisation,
+			// "VTWEG": this.distrChannel,
+			// "SPART": this.divison
 				 
 			}
 		}));
@@ -497,11 +497,11 @@ oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 			  semanticObject: "ZSalesOrdOpnMgmtSem",
 			  action: "display"
 		        },
-			params : {"AUART": this.orderType,
+			params : {"AUART": this.orderType
 
-			"VKORG": this.salesOrganisation,
-			"VTWEG": this.distrChannel,
-			"SPART": this.divison
+			// "VKORG": this.salesOrganisation,
+			// "VTWEG": this.distrChannel,
+			// "SPART": this.divison
 				 
 			}
 		}));
