@@ -9,26 +9,7 @@ sap.ui.define([
 			
 			
 			
-			 //this.tableFragment = sap.ui.xmlfragment("com.sap.salesOrderStatusUi.salesOrderStatusUi.fragments.editOrders");
-
-    // this.getView().byId("page").addDependent(this.tableFragment);
-    
-//     var fragmentId = this.getView().createId("ediOrdersFrag");
-// var tab = sap.ui.core.Fragment.byId(fragmentId, "consumptionTable");
-    
-    
-//     	// Create a persistence key
-//  var oPersId = {container: "mycontainer-1", item: "myitem-1"};
-
-// // // Get a personalization service provider from the shell (or create your own)
-// var oProvider = sap.ushell.Container.getService("Personalization").getPersonalizer(oPersId);
-
-// // Instantiate a controller connecting your table and the persistence service
-// this._oTPC = new TablePersoController({
-//     table: tab,
-//     persoService: oProvider
-//   // persoService: persoService
-// }).activate();
+		
 
     this.ManualOrders();
     this.ediOrders();
