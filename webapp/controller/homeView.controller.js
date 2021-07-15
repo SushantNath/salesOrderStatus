@@ -416,19 +416,11 @@ var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 		        },
 			params : {
 
-			// "VKORG": this.salesOrganisation,
-			// "VTWEG": this.distrChannel,
-			// "SPART": this.divison
+		
 				 
 			}
 		}));
-// var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
-// 		target: {
-// 			  semanticObject: "ZSalesPricDiffSem",
-// 			  action: "display"
-// 		        },
-// 			params : {"Ordertype": this.orderType}
-// 		}));
+
 oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});	
 			
 			
@@ -514,6 +506,33 @@ oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
 // 			params : {"Ordertype": this.orderType}
 // 		}));
 oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});
+			
+		},
+		
+		//Changes for WRICEF Delta-6668 BCW
+		
+			onBCWPress: function (oEvent) {
+				console.log("Inside BCW press");
+		//	console.log("Inside Price diffrence");
+		//	this.orderType="BO";
+
+var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
+
+var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
+var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
+		target: {
+			  semanticObject: "ZSalesPricDiffSem",
+			  action: "display"
+		        },
+			params : {
+
+		
+				 
+			}
+		}));
+
+oCrossAppNavigator.toExternal({target: {shellHash: hashUrl}});	
+			
 			
 		}
 		

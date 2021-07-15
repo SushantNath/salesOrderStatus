@@ -157,6 +157,71 @@
 											
 											</HBox>
 											
+												<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
+									<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>ediOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label  text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label  id="ediNewOrdId" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label id="ediErrorOrdId" design="Bold" class=" sapUiSmallMarginBegin " />
+												</HBox>
+											
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop" height="auto">
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onEdiOrderPress"/>
+											
+											</HBox>
+											
+											
+										
+												</VBox>
+								</l:BlockLayoutCell>
+								
+									<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
+									<VBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>ediOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label  text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label  id="ediNewOrdId" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label id="ediErrorOrdId" design="Bold" class=" sapUiSmallMarginBegin " />
+												</HBox>
+											
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop" height="auto">
+													<Button class="sapUiLargeMarginBegin"  text="{i18n>viewReport}" press="onEdiOrderPress"/>
+											
+											</HBox>
+									
+												</VBox>
+								</l:BlockLayoutCell>
+											
+											<!--Extension for WRICEF 2899 Delta-6668 - OCR orders/Business center workplace  -->
+											
+												<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
+									<VBox>
+											
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>ocrOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+										<!--	<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label text="{i18n>delBlocked}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label id="deliveryBlkErrOrdId" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>-->
+											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
+												<Button class="sapUiLargeMarginBegin"  text="{i18n>bcwText}" press="onBCWPress"/>
+											
+											</HBox>
+												
+												</VBox>
+								</l:BlockLayoutCell>
 											
 										
 												</VBox>
