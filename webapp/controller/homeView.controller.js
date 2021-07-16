@@ -502,8 +502,8 @@ var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNaviga
 var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
 var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 		target: {
-			  semanticObject: "ZSalesPricDiffSem",
-			  action: "display"
+			 semanticObject: "ZP2P",
+			  action: "PF03_WP"
 		        },
 			params : {
 

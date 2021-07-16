@@ -13,20 +13,16 @@
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.38.11"
 		},
-		
-			"dataSources": {
+		"dataSources": {
 			"manualOrder": {
 				"uri": "/sap/opu/odata/sap/ZOTC_MANUAL_ORD_MONITOR_SRV",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"
-				
 				}
 			}
-		
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -43,7 +39,6 @@
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
@@ -71,14 +66,16 @@
 					"bundleName": "com.sap.salesOrderStatusUi.salesOrderStatusUi.i18n.i18n"
 				}
 			},
-				"manualOrdersModel": {
+			"manualOrdersModel": {
 				"dataSource": "manualOrder"
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -90,11 +87,15 @@
 				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "RoutehomeView",
-				"pattern": "RoutehomeView",
-				"target": ["TargethomeView"]
-			}],
+			"routes": [
+				{
+					"name": "RoutehomeView",
+					"pattern": "RoutehomeView",
+					"target": [
+						"TargethomeView"
+					]
+				}
+			],
 			"targets": {
 				"TargethomeView": {
 					"viewType": "XML",
@@ -105,5 +106,9 @@
 				}
 			}
 		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/z_salesmonito18/webapp",
+		"_version": "1.1.0"
 	}
 }
