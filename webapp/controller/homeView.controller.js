@@ -281,7 +281,8 @@ sap.ui.define([
 			var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
 			var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 				target: {
-					semanticObject: "ZSalesOrdOpnMgmtSem",
+				//	semanticObject: "ZSalesOrdfromsware",
+					semanticObject: "ZSalesOrdfromsware",
 					action: "display"
 				},
 				params: {
@@ -469,7 +470,8 @@ sap.ui.define([
 
 			var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 				target: {
-					semanticObject: "ZSalesOrdOpnMgmtSem",
+				//	semanticObject: "ZSalesOrdOpnMgmtSem",
+				semanticObject: "ZSalesOrdfromEDI",
 					action: "display"
 				},
 				params: {

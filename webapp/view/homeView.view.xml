@@ -173,15 +173,21 @@
 							<l:BlockLayout >
 							<l:BlockLayoutRow >
 								
-								
-											
-											
 												<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
 									<VBox>
 											
 											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
 											<Label text="{i18n>ocrOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
+											
+												<HBox class="sapUiTinyMargin sapUiTinyMarginBottom sapUiNoMarginTop" height="auto">
+												<Label visible="false" text="{i18n>newOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+													<Label  visible="false" design="Bold" class=" sapUiSmallMarginBegin "/>
+											</HBox>
+											<HBox class="sapUiTinyMargin sapUiNoMarginTop" height="auto">
+												<Label visible="false" text="{i18n>errorOrders}"  class="orderDetailsHeaderText sapUiSmallMarginBegin "/>
+												<Label visible="false" design="Bold" class=" sapUiSmallMarginBegin " />
+												</HBox>
 									
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
 												<Button class="sapUiLargeMarginBegin"  text="{i18n>bcwText}" press="onBCWPress"/>
@@ -193,46 +199,46 @@
 								
 									<!-- invisible cards used for proper alignment-->
 								
-									<l:BlockLayoutCell width="1" visible="false" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
+									<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding ">
 									<VBox>
 											
-											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+										<!--	<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
 											<Label text="{i18n>ocrOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 									
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
 												<Button class="sapUiLargeMarginBegin"  text="{i18n>bcwText}" />
 											
-											</HBox>
+											</HBox>-->
 												
 												</VBox>
 								</l:BlockLayoutCell>
-									<l:BlockLayoutCell width="1" visible="false" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
+									<l:BlockLayoutCell width="1"  class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding ">
 									<VBox>
 											
-											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+										<!--	<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
 											<Label text="{i18n>ocrOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 									
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
 												<Button class="sapUiLargeMarginBegin"  text="{i18n>bcwText}" />
 											
-											</HBox>
+											</HBox>-->
 												
 												</VBox>
 								</l:BlockLayoutCell>
 								
-									<l:BlockLayoutCell width="1" visible="false" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor4">
+									<l:BlockLayoutCell width="1"  class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding ">
 									<VBox>
 											
-											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+										<!--	<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
 											<Label text="{i18n>ocrOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 									
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
 												<Button class="sapUiLargeMarginBegin"  text="{i18n>bcwText}" />
 											
-											</HBox>
+											</HBox>-->
 												
 												</VBox>
 								</l:BlockLayoutCell>
