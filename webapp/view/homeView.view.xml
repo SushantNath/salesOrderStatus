@@ -197,22 +197,24 @@
 												</VBox>
 								</l:BlockLayoutCell>
 								
-									<!-- invisible cards used for proper alignment-->
+									<!-- card for list of orders-->
 								
-									<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding ">
+									<l:BlockLayoutCell width="1" class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding detailsCard newCardsColor2 ">
 									<VBox>
 											
-										<!--	<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
-											<Label text="{i18n>ocrOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
+											<HBox class="sapUiTinyMargin sapUiTinyMarginBottom" height="auto">
+											<Label text="{i18n>listOrders}" design="Bold" class=" sapUiSmallMarginBegin "/>
 											</HBox>
 									
 											<HBox class="sapUiTinyMargin sapUiTinyMarginTop sapUiMediumMarginBottom" height="auto">
-												<Button class="sapUiLargeMarginBegin"  text="{i18n>bcwText}" />
+												<Button class="sapUiLargeMarginBegin"  text="{i18n>listOrdersButton}" press="onListOrders" />
 											
-											</HBox>-->
+											</HBox>
 												
 												</VBox>
 								</l:BlockLayoutCell>
+								
+									<!-- invisible cards used for proper alignment-->
 									<l:BlockLayoutCell width="1"  class="sapUiTinyMarginEnd sapUiTinyMarginTop sapUiNoContentPadding ">
 									<VBox>
 											

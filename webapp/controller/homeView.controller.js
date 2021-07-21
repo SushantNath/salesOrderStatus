@@ -489,7 +489,7 @@ sap.ui.define([
 		},
 
 		//Changes for WRICEF Delta-6668 BCW
-
+       //Method for BCW tile
 		onBCWPress: function(oEvent) {
 			console.log("Inside BCW press");
 			//	console.log("Inside Price diffrence");
@@ -514,7 +514,34 @@ sap.ui.define([
 				}
 			});
 
+		},
+		 //Method for List of orders tile
+		onListOrders: function(oEvent) {
+			console.log("Inside BCW press");
+			//	console.log("Inside Price diffrence");
+			//	this.orderType="BO";
+
+			var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
+
+			var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
+			var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
+				target: {
+					semanticObject: "SalesOrder",
+					action: "list"
+				},
+				params: {
+
+				}
+			}));
+
+			oCrossAppNavigator.toExternal({
+				target: {
+					shellHash: hashUrl
+				}
+			});
+
 		}
+
 
 	});
 });
