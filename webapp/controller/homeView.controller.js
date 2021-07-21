@@ -288,22 +288,11 @@ sap.ui.define([
 				params: {
 					"AUART": this.orderType,
 
-					// "VKORG": this.salesOrganisation,
-					// "VTWEG": this.distrChannel,
-					// "SPART": this.divison
+				
 
 				}
 			}));
-			// var hashUrl = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
-			// 		target: {
-			// 			  semanticObject: "ZSalesOrdOpnMgmtSem",
-			// 			  action: "display"
-			// 		        },
-			// 			params : {"Ordertype": this.orderType,
-			// 				 "DistributionChannel": this.distrChannel,
-			// 			"SalesOrganization":	this.salesOrganisation
-			// 			}
-			// 		}));
+		
 			oCrossAppNavigator.toExternal({
 				target: {
 					shellHash: hashUrl
